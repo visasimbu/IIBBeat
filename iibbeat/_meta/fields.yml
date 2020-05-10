@@ -1,0 +1,57 @@
+- key: iibbeat
+  title: iibbeat
+  description:
+  fields:
+    - name: counter
+      type: long
+      required: true
+      description: >
+        PLEASE UPDATE DOCUMENTATION
+    - name: mqsiresult
+      type: group
+      fields:
+      - name: brokername
+        type: keyword
+        required: true
+        description: >
+          This is broker name
+      - name: brokerstatus
+        type: keyword
+        required: true
+        description: >
+          This is broker status
+      - name: executiongroupname
+        type: keyword
+        required: true
+        description: >
+          This is executiongroup name
+      - name: executiongroupstatus
+        type: keyword
+        required: true
+        description: >
+          This is executiongroup status
+      - name: appname
+        type: keyword
+        required: true
+        description: >
+          This is app name
+      - name: appstatus
+        type: keyword
+        required: true
+        description: >
+          This is app status
+      - name: appdeployedtime
+        type: keyword
+        required: true
+        description: >
+          This is app deployed time
+      - name: appbarfilename
+        type: keyword
+        required: true
+        description: >
+          This is app bar filename status
+      - name: appbarfilelastmodifiedtime
+        type: keyword
+        required: true
+        description: >
+          This is app bar file last modified time
