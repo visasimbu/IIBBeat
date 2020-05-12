@@ -1,0 +1,121 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "This is IIBBeat dashboard",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"language\": \"kuery\", \"query\": \"\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"embeddableConfig\": {}, \"gridData\": {\"h\": 15, \"i\": \"e1028e62-3502-43b8-bb7a-db822ca90541\", \"w\": 24, \"x\": 0, \"y\": 0}, \"panelIndex\": \"e1028e62-3502-43b8-bb7a-db822ca90541\", \"panelRefName\": \"panel_0\", \"version\": \"7.6.2\"}, {\"embeddableConfig\": {}, \"gridData\": {\"h\": 15, \"i\": \"77cfd962-a7f8-4fc2-8413-f7b05d5dfecf\", \"w\": 24, \"x\": 24, \"y\": 0}, \"panelIndex\": \"77cfd962-a7f8-4fc2-8413-f7b05d5dfecf\", \"panelRefName\": \"panel_1\", \"version\": \"7.6.2\"}, {\"embeddableConfig\": {}, \"gridData\": {\"h\": 16, \"i\": \"163f6099-556b-492f-bd3e-7037cbafbe2f\", \"w\": 48, \"x\": 0, \"y\": 15}, \"panelIndex\": \"163f6099-556b-492f-bd3e-7037cbafbe2f\", \"panelRefName\": \"panel_2\", \"version\": \"7.6.2\"}]",
+                "timeRestore": false,
+                "title": "[IIBBeat]IIBDashboard",
+                "version": 1
+            },
+            "id": "98aa2ee0-943c-11ea-9896-63276eebda61",
+            "migrationVersion": {
+                "dashboard": "7.3.0"
+            },
+            "references": [
+                {
+                    "id": "d527aea0-93b6-11ea-b269-5d3504162caa",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "07ff13c0-943b-11ea-9896-63276eebda61",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "7dc399c0-93c6-11ea-b269-5d3504162caa",
+                    "name": "panel_2",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2020-05-12T10:37:36.846Z",
+            "version": "WzYyMSw0XQ=="
+        },
+        {
+            "attributes": {
+                "description": "This guage will give information about number of Integration Node running and stopped status",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}}"
+                },
+                "title": "[IIBBeat]IntegrationNodeStatus",
+                "uiStateJSON": "{\"vis\": {\"defaultColors\": {\"0 - 50\": \"rgb(0,104,55)\", \"50 - 75\": \"rgb(255,255,190)\", \"75 - 100\": \"rgb(165,0,38)\"}, \"legendOpen\": true}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"id\": \"1\", \"params\": {\"customLabel\": \"IIBIntegrationNodeStatus\", \"field\": \"mqsiresult.nodeName.keyword\"}, \"schema\": \"metric\", \"type\": \"cardinality\"}, {\"enabled\": true, \"id\": \"2\", \"params\": {\"customLabel\": \"Node\", \"field\": \"mqsiresult.nodeStatus.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"1\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"group\", \"type\": \"terms\"}], \"params\": {\"addLegend\": true, \"addTooltip\": true, \"dimensions\": {\"series\": [{\"accessor\": 0, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"mqsiresult.nodeStatus.keyword: Ascending\", \"params\": {}}], \"x\": null, \"y\": [{\"accessor\": 1, \"aggType\": \"cardinality\", \"format\": {\"id\": \"number\"}, \"label\": \"IIBIntegrationNodeStatus\", \"params\": {}}]}, \"gauge\": {\"alignment\": \"automatic\", \"backStyle\": \"Full\", \"colorSchema\": \"Green to Red\", \"colorsRange\": [{\"from\": 0, \"to\": 50}, {\"from\": 50, \"to\": 75}, {\"from\": 75, \"to\": 100}], \"extendRange\": true, \"gaugeColorMode\": \"Labels\", \"gaugeStyle\": \"Full\", \"gaugeType\": \"Arc\", \"invertColors\": false, \"labels\": {\"color\": \"black\", \"show\": true}, \"orientation\": \"vertical\", \"percentageMode\": false, \"scale\": {\"color\": \"rgba(105,112,125,0.2)\", \"labels\": false, \"show\": true}, \"style\": {\"bgColor\": true, \"bgFill\": \"rgba(105,112,125,0.2)\", \"bgMask\": false, \"bgWidth\": 0.9, \"fontSize\": 60, \"mask\": false, \"maskBars\": 50, \"subText\": \"IIBIntegrationNode\", \"width\": 0.9}, \"type\": \"meter\"}, \"isDisplayWarning\": false, \"type\": \"gauge\"}, \"title\": \"[IIBBeat]IntegrationNodeStatus\", \"type\": \"gauge\"}"
+            },
+            "id": "d527aea0-93b6-11ea-b269-5d3504162caa",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "93f43da0-939c-11ea-b269-5d3504162caa",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-05-12T10:43:37.550Z",
+            "version": "WzYyNiw0XQ=="
+        },
+        {
+            "attributes": {
+                "description": "This will show the Node,Server and app",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "[IIBBeat]NodeCapacity",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"id\": \"1\", \"params\": {\"customLabel\": \"Node Capacity\"}, \"schema\": \"metric\", \"type\": \"count\"}, {\"enabled\": true, \"id\": \"2\", \"params\": {\"customLabel\": \"NodeName\", \"field\": \"mqsiresult.nodeName.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"1\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 50}, \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"3\", \"params\": {\"customLabel\": \"IntegServer Name\", \"field\": \"mqsiresult.integrationServerName.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"desc\", \"orderBy\": \"1\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 5}, \"schema\": \"segment\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"4\", \"params\": {\"customLabel\": \"app Name\", \"field\": \"mqsiresult.appName.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"desc\", \"orderBy\": \"1\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 5}, \"schema\": \"segment\", \"type\": \"terms\"}], \"params\": {\"addLegend\": true, \"addTooltip\": true, \"dimensions\": {\"buckets\": [{\"accessor\": 0, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"NodeName\", \"params\": {}}, {\"accessor\": 2, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"IntegServer Name\", \"params\": {}}, {\"accessor\": 4, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"app Name\", \"params\": {}}, {\"accessor\": 6, \"aggType\": \"filters\", \"format\": {}, \"label\": \"filters\", \"params\": {}}], \"metric\": {\"accessor\": 1, \"aggType\": \"count\", \"format\": {\"id\": \"number\"}, \"label\": \"Node Capacity\", \"params\": {}}}, \"isDonut\": true, \"labels\": {\"last_level\": true, \"show\": true, \"truncate\": 100, \"values\": true}, \"legendPosition\": \"right\", \"type\": \"pie\"}, \"title\": \"[IIBBeat]NodeCapacity\", \"type\": \"pie\"}"
+            },
+            "id": "07ff13c0-943b-11ea-9896-63276eebda61",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "93f43da0-939c-11ea-b269-5d3504162caa",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-05-12T10:35:26.648Z",
+            "version": "WzYxOSw0XQ=="
+        },
+        {
+            "attributes": {
+                "description": "This table shows the list of Node and EG status",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\", \"query\": {\"language\": \"kuery\", \"query\": \"\"}}"
+                },
+                "title": "[IIBBeat]NodeDataTable",
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": 7, \"direction\": \"asc\"}}}}",
+                "version": 1,
+                "visState": "{\"aggs\": [{\"enabled\": true, \"id\": \"1\", \"params\": {\"customLabel\": \"NoOfDeployment\", \"field\": \"mqsiresult.appDeployedTime.keyword\"}, \"schema\": \"metric\", \"type\": \"cardinality\"}, {\"enabled\": true, \"id\": \"12\", \"params\": {\"customLabel\": \"Server Host Name\", \"field\": \"host.hostname.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"row\": true, \"size\": 5}, \"schema\": \"split\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"3\", \"params\": {\"customLabel\": \"Integration Node Name\", \"field\": \"mqsiresult.nodeName.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"1\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"4\", \"params\": {\"customLabel\": \"IntegrationNode Status\", \"field\": \"mqsiresult.nodeStatus.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"5\", \"params\": {\"customLabel\": \"IntegrationServer Name\", \"field\": \"mqsiresult.integrationServerName.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"6\", \"params\": {\"customLabel\": \"IntegrationServer Status\", \"field\": \"mqsiresult.integrationServerStatus.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 5}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"7\", \"params\": {\"customLabel\": \"App Name\", \"field\": \"mqsiresult.appName.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"8\", \"params\": {\"customLabel\": \"App Status\", \"field\": \"mqsiresult.appStatus.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"10\", \"params\": {\"customLabel\": \"App Type\", \"field\": \"mqsiresult.appType.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"9\", \"params\": {\"customLabel\": \"Bar File Name\", \"field\": \"mqsiresult.appBarFilename.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}, {\"enabled\": true, \"id\": \"11\", \"params\": {\"customLabel\": \"Bar File Last Deployed Time\", \"field\": \"mqsiresult.appDeployedTime.keyword\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"order\": \"asc\", \"orderBy\": \"_key\", \"otherBucket\": false, \"otherBucketLabel\": \"Other\", \"size\": 100}, \"schema\": \"bucket\", \"type\": \"terms\"}], \"params\": {\"dimensions\": {\"buckets\": [{\"accessor\": 1, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"Integration Node Name\", \"params\": {}}, {\"accessor\": 2, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"IntegrationNode Status\", \"params\": {}}, {\"accessor\": 3, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"IntegrationServer Name\", \"params\": {}}, {\"accessor\": 4, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"IntegrationServer Status\", \"params\": {}}, {\"accessor\": 5, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"App Name\", \"params\": {}}, {\"accessor\": 6, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"App Status\", \"params\": {}}, {\"accessor\": 7, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"App Type\", \"params\": {}}, {\"accessor\": 8, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"Bar File Name\", \"params\": {}}, {\"accessor\": 9, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"Bar File Last Deployed Time\", \"params\": {}}], \"metrics\": [{\"accessor\": 10, \"aggType\": \"cardinality\", \"format\": {\"id\": \"number\"}, \"label\": \"NoOfDeployment\", \"params\": {}}], \"splitRow\": [{\"accessor\": 0, \"aggType\": \"terms\", \"format\": {\"id\": \"terms\", \"params\": {\"id\": \"string\", \"missingBucketLabel\": \"Missing\", \"otherBucketLabel\": \"Other\", \"parsedUrl\": {\"basePath\": \"\", \"origin\": \"http://localhost:5601\", \"pathname\": \"/app/kibana\"}}}, \"label\": \"Server Host Name\", \"params\": {}}]}, \"perPage\": 10, \"percentageCol\": \"\", \"showMetricsAtAllLevels\": false, \"showPartialRows\": false, \"showTotal\": false, \"sort\": {\"columnIndex\": 7, \"direction\": \"asc\"}, \"totalFunc\": \"sum\"}, \"title\": \"[IIBBeat]NodeDataTable\", \"type\": \"table\"}"
+            },
+            "id": "7dc399c0-93c6-11ea-b269-5d3504162caa",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "93f43da0-939c-11ea-b269-5d3504162caa",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-05-12T10:07:41.750Z",
+            "version": "WzYwNiw0XQ=="
+        }
+    ],
+    "version": "7.6.2"
+}

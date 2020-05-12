@@ -1,0 +1,67 @@
+- key: iibbeat
+  title: iibbeat
+  description:
+  fields:
+    - name: counter
+      type: long
+      required: true
+      description: >
+        This is counter field
+    - name: mqsiresult
+      type: group
+      fields:
+      - name: correlationID
+        type: keyword
+        required: true
+        description: >
+          This is correlationID field which will hold UUID. This ID will be used to correlate the events generated for each tick.
+      - name: nodeName
+        type: keyword
+        required: true
+        description: >
+          This is Integration node name or broker name
+      - name: nodeStatus
+        type: keyword
+        required: true
+        description: >
+          This is node or broker status
+      - name: integrationServerName
+        type: keyword
+        required: true
+        description: >
+          This is integration server or executiongroup name
+      - name: integrationServerStatus
+        type: keyword
+        required: true
+        description: >
+          This is integration server or executiongroup status
+      - name: appName
+        type: keyword
+        required: true
+        description: >
+          This is app name
+      - name: appStatus
+        type: keyword
+        required: true
+        description: >
+          This is app status
+      - name: appType
+        type: keyword
+        required: true
+        description: >
+          This is app type
+      - name: appDeployedTime
+        type: keyword
+        required: true
+        description: >
+          This is app deployed time
+      - name: appBarFilename
+        type: keyword
+        required: true
+        description: >
+          This is app bar file name 
+      - name: appBarFileLastModifiedTime
+        type: keyword
+        required: true
+        description: >
+          This is app bar file last modified time
