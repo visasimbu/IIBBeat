@@ -3,7 +3,7 @@
 Welcome to IIBBeat.
 
 Ensure that this folder is at the following location:
-`${GOPATH}/src/github.com/mygitlab/iibbeat`
+`${GOPATH}/src/github.com/visasimbu/iibbeat`
 
 ## Getting Started with IIBBeat
 
