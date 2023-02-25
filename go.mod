@@ -35,7 +35,7 @@ require (
 	go.uber.org/zap v1.15.0 // indirect
 	golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79 // indirect
 	golang.org/x/lint v0.0.0-20200302205851-738671d3881b
-	golang.org/x/sys v0.0.0-20200501145240-bc7a7d42d5c3 // indirect
+	golang.org/x/sys v0.1.0 // indirect
 	golang.org/x/tools v0.0.0-20200507192325-6441d34c3f03
 	honnef.co/go/tools v0.0.1-2020.1.3 // indirect
 	howett.net/plist v0.0.0-20200419221736-3b63eb3a43b5 // indirect
